@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- HALAMAN 1 : COVER (layout grid 2 kolom) -->
+    <section id="halaman-1" class="cover">
+
+        <div class="cover-kiri">
+            <div class="kotak-nama">
+                <hr>
+                <p class="tulisan-script">Pernikahan</p>
+                <h2 class="nama-kecil">Arya &amp; Nadia</h2>
+                <p class="tanggal-kecil">Sabtu, 26 November 2026</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="cover-kanan">
+            <div class="bingkai">
+                <p class="label-atas">THE WEDDING OF</p>
+
+                <h1 class="nama-besar">
+                    Arya<br>
+                    <span class="dan">&amp;</span><br>
+                    Nadia
+                </h1>
+
+                <p class="tanggal-besar">SABTU, 26 NOVEMBER 2026</p>
+
+                <div class="info-tamu">
+                    <p class="kepada">KEPADA YTH:</p>
+                    <p class="nama-tamu" id="nama-tamu">Tamu Undangan</p>
+                </div>
+
+                <!-- Tombol ini diklik untuk pindah ke halaman berikutnya -->
+                <button type="button" class="tombol-buka" onclick="bukaUndangan()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                    Buka Undangan
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HALAMAN 2 : ISI UNDANGAN -->
+    <main id="halaman-2" class="halaman-isi">
+
+        <!-- ===== Pembuka ===== -->
+        <section id="pembuka" class="bagian bg-krem">
+            <div class="isi">
+                <p class="label">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                <h2 class="judul">Dengan Rahmat Allah</h2>
+                <p class="paragraf">
+                    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
+                    Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.
+                </p>
+
+                <blockquote class="ayat">
+                    <q>Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan-pasangan untukmu
+                    dari jenismu sendiri, agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu
+                    rasa kasih dan sayang.</q>
+                    <cite>QS. Ar-Rum: 21</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ===== Mempelai ===== -->
+        <section id="mempelai" class="bagian bg-sage">
+            <div class="isi">
+                <p class="label">Mempelai</p>
+                <h2 class="judul">Dua Hati, Satu Langkah</h2>
+
+                <div class="grid-mempelai">
+                    <!-- Mempelai pria -->
+                    <figure class="kartu-mempelai">
+                        <img src="pasangan2.jpg" width="400" height="560">
+                        <figcaption>
+                            <h3 class="nama-mempelai">M. Arya Fadil </h3>
+                            <p>Putra pertama dari<br>Bapak Hendra Wijaya &amp; Ibu Sari Lestari</p>
+                            <a href="https://instagram.com/" target="_blank" class="link-ig">@Aryafdl</a>
+                        </figcaption>
+                    </figure>
+
+                    <!-- Mempelai wanita -->
+                    <figure class="kartu-mempelai">
+                        <img src="pasangan1.jpg" width="400" height="560">
+                        <figcaption>
+                            <h3 class="nama-mempelai">Nadia Ayu Kusuma</h3>
+                            <p>Putri pertama dari<br>Bapak Bambang Kusuma &amp; Ibu Retno Handayani</p>
+                            <a href="https://instagram.com/" target="_blank" class="link-ig">@naddayu</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Hitung mundur ===== -->
+        <section id="hitung-mundur" class="bagian bg-gelap">
+            <div class="isi">
+                <p class="label">Menuju Hari Bahagia</p>
+                <h2 class="judul">Counting The Days</h2>
+
+                <div class="waktu">
+                    <div class="kotak-waktu"><span id="hari">00</span><small>Hari</small></div>
+                    <div class="kotak-waktu"><span id="jam">00</span><small>Jam</small></div>
+                    <div class="kotak-waktu"><span id="menit">00</span><small>Menit</small></div>
+                    <div class="kotak-waktu"><span id="detik">00</span><small>Detik</small></div>
+                </div>
+
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Pernikahan%20Nadia%20%26%20Arya&amp;dates=20261212T010000Z/20261212T070000Z"
+                   target="_blank" class="tombol-garis">Simpan ke Kalender</a>
+            </div>
+        </section>
+
+        <!-- ===== Acara ===== -->
+        <section id="acara" class="bagian bg-krem">
+            <div class="isi">
+                <p class="label">Save The Date</p>
+                <h2 class="judul">Rangkaian Acara</h2>
+
+                <div class="grid-acara">
+                    <div class="kartu-acara">
+                        <h3>Akad Nikah</h3>
+                        <p class="hari-acara">Sabtu, 26 November 2026</p>
+                        <p>08.00 WIB - 10.00 WIB</p>
+                        <hr>
+                        <!-- GANTI dengan lokasi acara kalian -->
+                        <p><b>EDELWEIS WEDDING HALL</b><br>Sport Club Goldland Karawaci, Gedung Edelweiss no. 1 dan 2, West Panunggangan, Cibodas, Jl. Palem Raja Raya, RT.002/RW.004, Bencongan Indah, Kecamatan Kelapa Dua, Kota Tangerang, Banten 15810, Indonesia</p>
+                        <a href="https://maps.google.com" target="_blank" class="tombol-maps">Buka Peta</a>
+                    </div>
+
+                    <div class="kartu-acara">
+                        <h3>Resepsi</h3>
+                        <p class="hari-acara">Sabtu, 26 November 2026</p>
+                        <p>11.00 WIB - Selesai</p>
+                        <hr>
+                        <p><b>EDELWEIS WEDDING HALL</b><br>Sport Club Goldland Karawaci, Gedung Edelweiss no. 1 dan 2, West Panunggangan, Cibodas, Jl. Palem Raja Raya, RT.002/RW.004, Bencongan Indah, Kecamatan Kelapa Dua, Kota Tangerang, Banten 15810, Indonesia</p>
+                        <a href="https://maps.google.com" target="_blank" class="tombol-maps">Buka Peta</a>
+                    </div>
+                </div>
+
+                <!-- Tabel susunan acara -->
+                <table class="tabel-acara" cellpadding="12">
+                    <caption>Susunan Acara Resepsi</caption>
+                    <thead>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Kegiatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>11.00</td>
+                            <td>Tamu undangan hadir</td>
+                        </tr>
+                        <tr>
+                            <td>12.00</td>
+                            <td>Sambutan keluarga &amp; doa bersama</td>
+                        </tr>
+                        <tr>
+                            <td>12.30</td>
+                            <td>Ramah tamah &amp; makan siang</td>
+                        </tr>
+                        <tr>
+                            <td>14.00</td>
+                            <td>Sesi foto bersama</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Galeri -->
+        <section id="galeri" class="bagian bg-rose">
+            <div class="isi">
+                <p class="label">Galeri</p>
+                <h2 class="judul">Our Gallery</h2>
+                <p class="paragraf">Potret kecil dari perjalanan kami berdua.</p>
+
+                <div class="grid-galeri">
+                    <img src="foto1.jpg" alt="Foto galeri 1">
+                    <img src="foto2.jpg" alt="Foto galeri 2">
+                    <img src="foto1.jpg" alt="Foto galeri 3">
+                    <img src="foto5.jpg" alt="Foto galeri 4">
+                    <img src="foto4.jpg" alt="Foto galeri 5">
+                    <img src="foto6.jpg" alt="Foto galeri 6">
+                </div>
+            </div>
+        </section>
+
+        <!-- Love story -->
+        <section id="cerita" class="bagian bg-krem">
+            <div class="isi">
+                <p class="label">Cerita Kami</p>
+                <h2 class="judul">Love Story</h2>
+
+                <dl class="cerita">
+                    <dt>2022 &mdash; Pertama Bertemu</dt>
+                    <dd>Dua orang yang awalnya hanya saling mengenal dari jauh, perlahan menemukan alasan
+                        untuk saling bertahan dan mengobrol lebih lama.</dd>
+
+                    <dt>2025 &mdash; Lamaran</dt>
+                    <dd>Dengan restu kedua keluarga, kami memutuskan melangkah lebih serius dalam sebuah
+                        acara sederhana yang penuh doa.</dd>
+
+                    <dt>2026 &mdash; Menuju Halal</dt>
+                    <dd>Kini semua persiapan hampir selesai. Kami menantikan hari ketika dua keluarga
+                        menjadi satu.</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Amplop digital -->
+        <section id="hadiah" class="bagian bg-sage">
+            <div class="isi">
+                <p class="label">Tanda Kasih</p>
+                <h2 class="judul">Wedding Gift</h2>
+                <p class="paragraf">
+                    Doa restu Anda adalah hadiah terindah bagi kami. Namun jika ingin memberi tanda kasih,
+                    Anda dapat mengirimkannya melalui amplop digital berikut.
+                </p>
+
+                <details class="amplop">
+                    <summary>Buka Amplop Digital</summary>
+
+                    <div class="kartu-rekening">
+                        <p class="nama-bank">Bank Rakyat Indonesia</p>
+                        <p class="no-rekening" id="no-rekening">0000 0000 0000</p>
+                        <p>a.n. Estiawan Nagata C.P.</p>
+                        <button type="button" class="tombol-kecil" onclick="salinTeks('no-rekening')">Salin Rekening</button>
+                    </div>
+
+                    <div class="kartu-rekening">
+                        <p class="nama-bank">Kirim Kado</p>
+                        <p id="alamat-kado">Velanisa Lutfiana, Surabaya</p>
+                        <button type="button" class="tombol-kecil" onclick="salinTeks('alamat-kado')">Salin Alamat</button>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- RSVP & ucapan -->
+        <section id="rsvp" class="bagian bg-krem">
+            <div class="isi">
+                <p class="label">RSVP</p>
+                <h2 class="judul">Best Wishes</h2>
+                <p class="paragraf">Sampaikan doa, ucapan, dan konfirmasi kehadiran Anda.</p>
+
+                <form id="form-ucapan" class="form-ucapan" onsubmit="return kirimUcapan(event)">
+                    <fieldset>
+                        <legend>Konfirmasi Kehadiran</legend>
+
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" maxlength="40" required>
+
+                        <p class="label-form">Kehadiran</p>
+                        <div class="pilihan">
+                            <label><input type="radio" name="hadir" value="Hadir" checked> Hadir</label>
+                            <label><input type="radio" name="hadir" value="Tidak hadir"> Tidak hadir</label>
+                        </div>
+
+                        <label for="jumlah">Jumlah Tamu</label>
+                        <select id="jumlah" name="jumlah">
+                            <option value="1 orang">1 orang</option>
+                            <option value="2 orang">2 orang</option>
+                            <option value="3 orang">3 orang</option>
+                            <option value="4 orang">4 orang</option>
+                        </select>
+
+                        <label for="pesan">Ucapan &amp; Doa</label>
+                        <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis ucapan untuk kedua mempelai" required></textarea>
+
+                        <button type="submit" class="tombol-buka">Kirim Ucapan</button>
+                    </fieldset>
+                </form>
+
+                <!-- Daftar ucapan (ditambah lewat JavaScript) -->
+                <ul class="daftar-ucapan" id="daftar-ucapan">
+                    <li>
+                        <b>Keluarga Besar Santoso</b>
+                        <span>Selamat menempuh hidup baru. Semoga menjadi keluarga sakinah, mawaddah, warahmah.</span>
+                    </li>
+                    <li>
+                        <b>Rina &amp; Doni</b>
+                        <span>Bahagia selalu untuk kalian berdua. Sampai jumpa di hari H!</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== Penutup ===== -->
+        <footer class="penutup">
+            <p class="paragraf">
+                Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan
+                hadir dan memberikan doa restu. Terima kasih atas segala perhatian dan doa yang diberikan.
+            </p>
+            <p class="kami">Kami yang berbahagia</p>
+            <p class="tulisan-script nama-penutup">Arya &amp; Nadia</p>
+            <small>&copy; 2026 Undangan Pernikahan Arya &amp; Nadia</small>
+        </footer>
+
+        <!-- Menu navigasi (link di halaman yang sama) -->
+        <nav class="menu-bawah">
+            <ul>
+                <li><a href="#mempelai">Mempelai</a></li>
+                <li><a href="#acara">Acara</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#hadiah">Hadiah</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+<body>
+    <audio id="weddingMusic" autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const music = document.getElementById('weddingMusic');
+
+    window.addEventListener('load', function () {
+        music.play().catch(function () {
+            console.log('Autoplay diblokir oleh browser.');
+        });
+    });
+</script>
+
+</body>
+</html>
